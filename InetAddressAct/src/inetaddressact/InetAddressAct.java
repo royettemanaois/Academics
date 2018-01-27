@@ -38,15 +38,12 @@ public class InetAddressAct {
             } catch (Exception e) {
                 System.out.println("IP address/Hostname not found!");
             }
-            
-            
-            do{
+
+            do {
                 System.out.print("Search another? [y/n]: ");
-                ans = input.nextLine();     
-            }while(!ans.equalsIgnoreCase("Y") && !ans.equalsIgnoreCase("N"));
-               
-            
-            
+                ans = input.nextLine();
+            } while (!ans.equalsIgnoreCase("Y") && !ans.equalsIgnoreCase("N"));
+
             hostNumber++;
         }
 

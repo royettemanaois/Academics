@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package inetaddressact;
 
 import java.net.InetAddress;
@@ -43,9 +38,15 @@ public class InetAddressAct {
             } catch (Exception e) {
                 System.out.println("IP address/Hostname not found!");
             }
-
-            System.out.print("Search another? [y/n]: ");
-            ans = input.nextLine();
+            
+            
+            do{
+                System.out.print("Search another? [y/n]: ");
+                ans = input.nextLine();     
+            }while(!ans.equalsIgnoreCase("Y") && !ans.equalsIgnoreCase("N"));
+               
+            
+            
             hostNumber++;
         }
 

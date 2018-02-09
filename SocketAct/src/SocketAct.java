@@ -1,9 +1,6 @@
-import java.net.*;
-import java.util.Scanner;
-
 /**
  * 
- * This program checks if the given ports is running
+ * This program tests if the given ports is running
  * on a specific hostname that is given by a user. The
  * program also specify what is the protocol for the
  * specific port.
@@ -15,6 +12,8 @@ import java.util.Scanner;
  *
  */
 
+import java.net.*;
+import java.util.Scanner;
 
 public class SocketAct {
 
@@ -24,18 +23,24 @@ public class SocketAct {
         System.out.print("Enter hostname: ");
         String hostName = input.nextLine();
 
+        // List of ports to be tested
         int[] port = {20, 22, 23, 25, 53, 67, 69, 80};
+
+        // List of protocol names for a specific port
         String[] protocol = {"File Transfer Protocol (FTP)",
             "Secure Shell (SSH)",
             "Telnet", "Simple Mail Transfer Protocol (SMTP)",
             "Domain Name System (DNS)", "Dynamic Host Configuration Protocol (DHCP)",
             "Trivial File Transfer Protocol (TFTP)",
             "Hypertext Transfer Protocol (HTTP)"};
-
+         
         System.out.println("Checking port: 20, 22, 23, 25, 53, 67, 69, 80");
 
         for (int i = 0; i < port.length; i++) {
             try {
+            	
+            	// Established the connection to the hostname and test if the port is open.
+
                 Socket sock = new Socket(hostName, port[i]);
                 System.out.println(hostName + "'s status for port " + port[i] + ", " + protocol[i] + ", is open.");
                 sock.close();

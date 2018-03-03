@@ -1,8 +1,16 @@
 
-
 import java.net.*;
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
+
+/**
+ * This program will serve as the server for the ChatClient program. The server will ask for the port
+ * to be used and then waits for a client to connect.
+ *
+ * @author Balantin, Renphil Ian G
+ * @author Manaois, Royette A
+ * @version 1.0, 03/03/2018
+ */
 
 public class ChatServer {
     public static void main(String[] args) throws IOException {
@@ -22,12 +30,14 @@ public class ChatServer {
 			out.println("Server: hello there");
             while ((inputLine = in.readLine()) != null) {
                  System.out.println(inputLine);
+                 if (inputLine.equals("Client: Bye.")){
+                 	out.println("Server: Bye.");
+                  	System.exit(1);
+           		 }
                  System.out.print("Server: ");
                  outputLine = consoleIn.nextLine();
                  out.println("Server: " +outputLine);
 
-               if (outputLine.equals("Bye."))
-                  	System.exit(1);
             }
 
             clientSocket.close();

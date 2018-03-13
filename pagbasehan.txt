@@ -1,0 +1,29 @@
+html
+
+<div class="photo">
+  <a href="https://placeholder.com"><img src="https://placeimg.com/350/150/any"></a>
+  <h1>View Gallery</h1>
+</div>
+
+css
+
+.photo h1 {
+  color:white;
+  position: absolute;
+  display: none;
+  font-family: sans-serif;
+}
+
+.photo:hover h1 {
+  display: block;
+  transition: .8 ease;
+}
+
+.photo img {
+  position: absolute;
+}
+
+.photo:hover img {
+    filter: brightness(50%);
+  transition: .5s ease;
+}

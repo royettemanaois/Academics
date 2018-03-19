@@ -2,7 +2,7 @@
 CSS3 Validation Result: No errors
 */
 
-@media screen and (max-device-width: 320px) and (max-device-height: 568px) { /*portrait for iphone 5*/
+@media screen and (device-aspect-ratio: 40/71) { /*portrait for iphone 5*/
 	div#details {
 		width: 90vw;
 		margin-left: -45vw;
@@ -11,7 +11,8 @@ CSS3 Validation Result: No errors
 	}
 	div#details.point {
 		height: inherit;
-		margin-top: -22.5vh;
+    	margin-top: -25.5vh;
+    	margin-left: -35.5vw;
 	}
 	div#details #textcontainer {
 		height: 80%;
@@ -98,7 +99,7 @@ CSS3 Validation Result: No errors
 }
 
 
-@media screen and (max-device-width: 360px) and (max-device-height: 640px) { /*portrait for Galaxy s5, Nexus 5x, and iPhone6*/
+@media screen and (min-device-width: 360px) and (min-device-height: 640px) { /*portrait for Galaxy s5, Nexus 5x, and iPhone6*/
 	div#details {
 		height: 75vh;
 		margin-top: -37.5vh;
@@ -143,7 +144,7 @@ CSS3 Validation Result: No errors
 }
 
 
-@media screen and (max-device-width: 412px) and (max-device-height: 732px) { /*portrait for Nexus 6P*/
+@media screen and (min-device-width: 412px) and (min-device-height: 732px) { /*portrait for Nexus 6P*/
 	div#details {
 		height: 70vh;
 		margin-top: -37.5vh;
@@ -175,7 +176,7 @@ CSS3 Validation Result: No errors
 }
 
 
-@media screen and (max-device-width: 414px) and (max-device-height: 736px) { /*iPhone6s+ Portrait*/
+@media screen and (min-device-width: 414px) and (min-device-height: 736px) { /*iPhone6s+ Portrait*/
 	div#details {
 		height: 70vh;
 		margin-top: -35vh;
@@ -217,15 +218,15 @@ CSS3 Validation Result: No errors
 }
 
 
-@media screen and (max-device-width: 768px) and (max-device-height: 1024px) { /*portrait for iPad*/
+@media screen and (min-device-width: 768px) and (min-device-height: 1024px) { /*portrait for iPad*/
 	div#details {
 		height: 30vh;
 		margin-top: -20vh;
 	}
 	div#details.point {
 		height: inherit;
-		margin-top: -12.5vh;
-		margin-left: -34vw;
+		margin-top: -25.5vh;
+		margin-left: -38.5vw;
 	}
 	div#options {
 		width: 40vw;
@@ -251,7 +252,7 @@ CSS3 Validation Result: No errors
 
 
 
-@media screen and (min-device-width: 1024px) and (min-device-height: 768px) { /*landscape for iPad and smaller laptops*/
+@media screen and (device-width: 1024px) and (device-height: 768px) { /*landscape for iPad and smaller laptops*/
 	div#details {
 		height: 40vh;
 		margin-top: -20vh;
@@ -260,7 +261,7 @@ CSS3 Validation Result: No errors
 		height: 30vh;
 		margin-top: -15vh;
 		width: 35vw;
-		margin-left: -17.5vw;
+		margin-left: -17.i5vw;
 	}
 	div#options {
 		width: 30vw;
@@ -291,7 +292,7 @@ CSS3 Validation Result: No errors
 	}
 }
 
-@media screen and (max-device-width: 1024px) and (min-device-height: 1366px) { /*portrait for iPad Pro*/
+@media screen and (min-device-width: 1024px) and (min-device-height: 1366px) { /*portrait for iPad Pro*/
 	div#details {
 		height: 20vh;
 		margin-top: -10vh;
@@ -335,7 +336,7 @@ CSS3 Validation Result: No errors
 
 
 /* Laptops and others */
-/*@media (max-device-width: 900px) and (max-device-height: 400px) { 
+/*@media (min-device-width: 900px) and (min-device-height: 400px) { 
 
 
 	div#details h1 {
@@ -346,7 +347,7 @@ CSS3 Validation Result: No errors
 		width: 35vw;
 		margin-left: -17.5vw;
 		height: 50vh;
-		max-height: 200px;
+		min-height: 200px;
 		margin-top: -25vh;
 	}
 	div#details p.list {
